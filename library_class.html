@@ -1,0 +1,44 @@
+<script>
+class Library {
+    constructor(){
+	this.books = {										1:{book_name :"book1",author:"a1"},						2:{book_name :"book2",author:"a2"},
+        	3:{book_name : "book3",author:"a3"},
+	};
+    }
+
+    show_book(){
+          let result_list = "<h1>Book List</h1>";
+           for (let id in this.books){
+                result_list += "<hr/><br/>" +
+                         "book name : " + this.books[id]["book_name"] + "<br/>" +
+                          "author name : " + this.books[id]["author"] + "<br/>" ;
+                                		
+            		}
+            		return result_list;
+    }
+
+    add_book(book_name, author){
+        const new_id = Object.keys(this.books).length + 1;
+        this.books[new_id] = {book_name: book_name, author: author};
+        document.write("new book added!!");
+    }
+    
+}
+
+book = new Library();
+document.write(book.show_book());
+book.add_book("book4", "a4");
+document.write(book.show_book());
+book.add_book("book4", "a4");
+document.write(book.show_book());
+
+
+
+
+
+    
+
+   
+
+
+</script>

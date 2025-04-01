@@ -1,0 +1,470 @@
+ForEach Loop
+=================
+Syntax : arrayOrObject.forEach(printFunctionName);
+
+ex:
+<script>
+	furniture = ["chair","wardrobe","table","desk"];
+	function printArray(value,key,thearray){
+		document.write(key + " : " +value + "array : "  + thearray+"<br />");
+	}
+	furniture.forEach(printArray);
+OR
+	furniture.forEach((value,key) =>{document.write(key + " : " 	+value + "<br />")});
+
+	
+</script>
+
+6.Functions
+================
+1.Library functions
+2.System defined or Inbuilt functions
+example : string handling functions : 
+		string.toLowerCase()
+		string.toUpperCase() etc
+
+	 Array handling functions:
+		array.push();
+		array.pop();	
+
+	Math functions:
+
+		Math.PI
+		Math.pow(5,2)
+
+	Date functions:
+		Date() //current date and time
+		date.today() //python-current date
+
+3.User Defined or Custom Functions
+=========================================
+
+Function Keywords & principles references
+===========================================
+
+=>function : to define functions 
+=>return : data or results from a function to its function call
+=>overloading : a concept of using a function name to define multiple functions
+		function sum(){code}
+		function sum(x,y){code} 
+		function sum(x,y,z){code}
+		sum(10,20,30)
+=>Encapsulation : 
+=>Pass by value : x= 5  => y=x
+=>pass by reference x=5  => y =x 
+=>Parameters :
+=>method : 
+=>Scope of variables :
+
+
+Functions without parameters
+=============================
+syntax :
+//function definition
+
+function function_name(){
+	code block
+	return result ;
+}
+
+//function call
+
+var result = function_name();
+print(result);
+
+Functions with parameters(mandatory)
+============================
+
+syntax :
+//function definition
+
+function function_name(param1 ,param2 ,etc){
+	code block
+	return result ;
+}
+
+//function call
+
+var result = function_name(value1 ,value2,etc);
+print(result);
+
+Functions With Optional parameters
+===================================
+syntax : 
+//function definition
+function function_name(param1=value ,param2 =value){  sum(n1,n2,n3=10)
+	code block
+	return result ;
+}
+
+//function call
+var result = function_name(value1 ,value2);  //sum(10,20)
+OR
+var result = function_name(value1);
+OR
+var result = function_name();
+
+Functions with array / object as parameter
+===========================================
+syntax : 
+
+//Function definition
+function functionName(arrayVariable = []){
+	code block;
+}
+
+//function call
+array = [1,20,30]; or new Array(1,20,30)
+var result = functionName(array);
+print(result);
+
+7.Object Oriented Programming - OOP
+======================================
+1.features - properties
+2.functions - Methods
+
+
+Second Seven Class-Based Programming Concepts
+===============================================
+
+1. Class
+2. Objects
+3. Access Modifiers
+4. Constructor
+5. Destructor
+6. Inheritance
+7. Polymorphism
+
+Class Keywords and Principles Reference
+========================================
+
+class = 
+Public
+Protected
+Private
+this
+new
+method 
+property
+object 
+polymorphism
+encapsulation
+abstraction
+overriding
+
+1.Class
+============
+syntax:
+class ClassName{
+	properties
+	methods
+}
+
+example : 
+class MyClass{
+	first_name = "";
+	age = "";
+	gender = "";
+	
+	my_function(){
+		document.write("Hello Scope India");
+	}
+	my_function2(){
+		document.write("Hello Friend");
+	}
+		
+}
+
+2.Objects
+==========
+syntax: var object_name = new ClassName();
+	var obj = new MyClass();
+
+access : object_name.property = "value";
+	 object_name.method();
+
+ex : obj.first_name = "sami";
+     obj.my_function();
+
+
+3.Access Modifiers
+=====================
+
+1.public
+2.protected
+3.private
+
+syntax:
+public var_name;
+protected var_name;
+private var_name;
+
+public methodName(){}
+protected methodName(){}
+private methodName(){}
+
+4.Constructor
+=================
+
+syntax:
+constructor(parameters){
+	code
+}
+
+example:
+class Customer{
+	constructor(name,age,gender){
+		this.first_name = name ;
+		this.age = age ;
+		this.gender = gender ;
+	}
+	view_profile(){
+		let profile = "Customer Profile <br />" + 
+			 	"Name : " + this.first_name + "<br />"+
+				"Age : " + this.age + "<br />"+
+				"Gender : " + this.gender;
+		return profile ;
+	}
+}
+let name = "Sami sanu";
+let age = 21;
+let gender = "Male" ;
+
+let obj = new  Customer(name,age,gender);
+let result = obj.view_profile();
+document.write(result);
+
+output:
+-----------
+Customer Profile
+Name : Sami sanu
+Age : 21
+Gender : Male
+
+
+5.Destructor
+===============
+syntax : ~ClassName(){} - c#,c++
+	void dispose(){} - Dart
+
+
+6.Inheritance
+===================
+
+
+syntax : class ClassName extends ParentClassName{}
+
+class ParentClass{
+	public int x;
+	private int y;
+	protected int z;
+
+	//constructor
+	public ParentClass(){
+		this.x = 100;
+		this.y = 200;
+		this.z = 300;
+	}
+}
+
+class ChildClass extends ParentClass{
+	public sum(){
+		int result = this.x + this.y +this.z ; //error
+		int result = this.x + this.z;//work
+		return result;
+	}
+}
+
+var obj = new ChildClass();
+obj.x = 500;// correct
+obj.y = 600;//error
+obj.z = 600;//error
+
+print(obj.sum()); //correct
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+<script>
+    function power(b,e){
+        power = 1; 
+        for(i=1;i<=e;i++){
+            power *=  b;
+        }
+        return power;
+    }
+    number = prompt("Enter a number");
+    number = Number(number);
+    e=prompt("Enter the exponential");
+    e = Number(e);
+    var p = power(number,e);
+    document.write("Result  = "+ p);
+</script>

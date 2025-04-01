@@ -1,0 +1,23 @@
+<script>
+    Number= prompt("enter");
+    temp = Number;
+    isPrime = true;
+    if(temp==1){
+        document.write("not");
+
+    }
+    else{
+        for(i=2;i<temp/2;i++){
+            if(temp%i==0){
+                isPrime = false;
+                break;
+            }
+        }
+    }
+     if(isPrime=true){
+        document.write("prime");
+     }
+     else{
+        document.write("not");
+     }
+</script>

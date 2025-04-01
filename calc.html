@@ -1,0 +1,19 @@
+<script>
+	class Calculator{
+		
+		result =0;
+		addition(x,y){
+			this.result = x+y;
+			return this.result;
+		}
+		
+
+	}
+	x = prompt("n1") ;
+	x = Number(x);
+	y = prompt("n2") ;
+	y = Number(y);
+	obj = new Calculator();
+	document.write("result : " + obj.addition(x,y));
+
+</script>
