@@ -1,0 +1,12 @@
+<script>
+	furniture = ["Chair","Wardrobe","table"];
+ 	function printArray(value,key,a){
+		document.write(key + " : " +value +" - "+a+"<br />");
+ 	}
+ 	furniture.forEach(printArray);
+
+	//another method
+	furniture.forEach((value,key,ar)=>{document.write(key + " : " +value +ar+"<br />")});
+
+
+</script>
