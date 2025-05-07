@@ -1,0 +1,21 @@
+<script>
+	function BiggestNumber(numbers = []){
+		var biggestNumber = 0 ;
+		//check the numbers array contains values
+		if(numbers.length > 0){
+			//loop numbers array
+			for(var index in numbers){
+				if(biggestNumber < numbers[index]){  
+					biggestNumber = numbers[index];
+				}
+			}
+		}
+		return "The biggest number is " + biggestNumber ;
+	}
+	var n = [50,3,6,12,105];
+	var result = BiggestNumber(n);
+	document.write(result);
+	var result = BiggestNumber([1,2,200,45,65]);
+	document.write(result);
+
+</script>

@@ -1,0 +1,24 @@
+<script>
+	function arrayReplace(search_item, replace_item,list_items = []){
+		//check listitem array contains values
+		if(list_items.length > 0 ){
+			//iterate array
+			for(var index in list_items){
+				if(list_items[index] == search_item){
+					list_items[index] = replace_item;
+				}
+			}
+		}
+		return list_items;
+	}
+
+	//function call
+	var food = ["pizza", "Burger", "Sandwich"];
+	var new_food = arrayReplace("Burger","French Fries",food);
+	
+	document.write(food + " <br>");
+	 //or 
+	for(var i in new_food){
+		document.write(new_food[i] + "<br />");
+	} 
+</script>

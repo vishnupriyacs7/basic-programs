@@ -1,0 +1,24 @@
+<script>
+	class Myclass{
+		first_name = "";
+		age = "";
+		gender = "";
+
+		my_function(){
+			document.write("Hello scope india <br />");
+		}
+
+		my_function2(){
+			document.write("hello" + this.first_name +"<br />");
+		}
+	}
+	var obj = new Myclass();
+	obj.first_name = "Anu";
+	document.write(obj.first_name +"<br />");
+	obj.my_function();
+	obj.my_function2();
+	
+	var student = new Myclass();
+	student.first_name = " Kate ";
+	student.my_function2();
+</script>

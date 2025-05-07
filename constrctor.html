@@ -1,0 +1,35 @@
+<script>
+	class Customer{
+		first_name ;
+		age;
+		gender;
+
+		//constructor method
+		constructor(n,a,g){
+			this.first_name = n;
+			this.age = a;
+			this.gender = g;
+		}
+
+		view_profile(){
+			var profile = " Customer Profile <br />" +
+				  "Name : "+this.first_name + "<br />" +
+				  "Age : "+ this.age + "<br />" +
+				  "gender : " + this.gender + "<br /><br >";
+			return profile;
+		}
+	}
+
+	var name = "Anu";
+	var age = 21;
+	var gender = "female";
+
+	var obj = new Customer(name,age,gender);
+	var result = obj.view_profile();
+	document.write(result);
+
+	var newcustomer = new Customer("Kate",25,"female");
+	var result = newcustomer.view_profile();
+	document.write(result);
+
+</script>

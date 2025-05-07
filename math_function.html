@@ -1,0 +1,28 @@
+<script>
+	function Math(first_number,second_number,action="addition"){
+		var result = 0 ; 
+		switch(action){
+			case "addition":
+				result = first_number + second_number;
+				break;
+			case "subtraction":
+				result = first_number - second_number;
+				break;
+			case "multiplication":
+				result = first_number * second_number;
+				break;
+			case "division":
+				result = first_number / second_number;
+				break;
+			default : 
+				result = "Operation not found";
+		}
+		return result;
+	}
+	//function call
+	var result = Math(30,50);
+	document.write(result + "<br/>");
+	var result = Math(5,10,"multiplication");
+	document.write(result);
+</script>
+
