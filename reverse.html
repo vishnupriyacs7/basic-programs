@@ -1,0 +1,17 @@
+<script>
+	var number =Number(prompt("enter a number"));
+	var rev = 0;
+	
+	function reverse(num){
+		var temp = num;
+		while(temp > 0 ){
+			last_digit = parseInt(temp%10);	
+			rev = parseInt(rev * 10) + parseInt(last_digit); 
+			temp = parseInt(temp / 10) ;
+		}
+		return rev;
+	}
+	var result = reverse(number);
+	
+	document.write("Reverse of number " + number + " is " +result +".");
+</script>
