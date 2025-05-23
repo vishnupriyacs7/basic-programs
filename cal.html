@@ -1,0 +1,29 @@
+<script>
+	class calculator{
+		constructor(num1,num2){
+			this.number1=num1;
+			this.number2=num2;
+		}
+		add(){
+			var result=this.number1+this.number2;
+			return result;
+		}
+		sub(){
+			var result=this.number1-this.number2;
+			return result;
+		}
+		mult(){
+			var result=this.number1*this.number2;;
+			return result;
+		}
+		div(){
+			var result=this.number1/this.number2;
+			return result;
+		}
+	}
+	num1=Number(prompt("enter the number"));
+	num2=Number(prompt("enter the number"));
+	var obj=new calculator(num1,num2);
+	document.write(obj.mult());
+
+</script>
